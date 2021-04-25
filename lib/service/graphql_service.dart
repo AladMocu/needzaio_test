@@ -60,7 +60,7 @@ class GraphQLService{
     if(result.hasException)
       {
 
-        return "There was a problem with your request: "+result.exception.toString();
+        return "There was a problem with your request: ";
       }
     var userList =result.data['users']['data'] as List<dynamic>;
 
