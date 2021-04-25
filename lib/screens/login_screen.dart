@@ -130,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       icon: Icon(NeedZaio.user,color: AppColors.secondaryElement,size: 26,),
                       contentPadding: EdgeInsets.all(0),
                       labelText: 'Username',
-                      labelStyle:TextStyle(color: AppColors.lineColor,fontWeight: FontWeight.w100),
+                      labelStyle:TextStyle(color: AppColors.lineColor,fontWeight: FontWeight.w400),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: AppColors.lineColor,width: 2),
                       ),

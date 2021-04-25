@@ -59,7 +59,8 @@ class GraphQLService{
       document: gql(query),));
     if(result.hasException)
       {
-        return "There was a problem with your request";
+
+        return "There was a problem with your request: "+result.exception.toString();
       }
     var userList =result.data['users']['data'] as List<dynamic>;
 

@@ -6,6 +6,7 @@ import 'package:needzaio_test/service/graphql_service.dart';
 import 'package:needzaio_test/values/need_zaio_icons.dart';
 import 'package:needzaio_test/values/values.dart';
 import 'package:needzaio_test/widgets/NavyBar.dart';
+import 'package:needzaio_test/screens/users_screen.dart';
 import 'package:needzaio_test/widgets/UserCard.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -18,7 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
   /// Index used to move items in the navigation bar
   int _currentIndex = 0;
 
-  GraphQLService _qgService =  GetIt.I.get<GraphQLService>();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
     ///Screen width
     double sWidth = MediaQuery.of(context).size.width;
+
+
 
 
     return Scaffold(
@@ -95,35 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                          child: Text("CONTACTOS",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)
                      ),
                     SizedBox(height: 26,),
-                    Container(
-
-                      child: Query(options: QueryOptions(
-                          document: gql(_qgService.getUsersQuery())
-                      ), builder: (QueryResult result, { VoidCallback refetch, FetchMore fetchMore }) {
-                        if (result.hasException) {
-                          return Text(result.exception.toString());
-                        }
-                        if (result.isLoading) {
-                          return Text('Loading');
-                        }
-                        List users = result.data['users']['data'];
-                        return Container(
-                          height: (630/812)*sHeight,
-                          child: SingleChildScrollView(
-                            physics: ScrollPhysics(),
-                            child: ListView.builder(
-                                itemCount: users.length,
-                                shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                itemBuilder: (context, index) {
-                                  final user = users[index];
-                                  return Center(child: UserCard(name: user["name"],mail: user["email"],profileURL: user["albums"]["data"][0]["photos"]["data"][0]["thumbnailUrl"],));
-                                  return Text(user['name']);
-                                }),
-                          ),
-                        );
-                      }),
-                    ),
+                    UsersScreen()
                   ],
                 ),
               ),
