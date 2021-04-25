@@ -19,10 +19,15 @@ class _LoginScreenState extends State<LoginScreen> {
 
   GraphQLService _qgService =  GetIt.I.get<GraphQLService>();
 
+  /// Loading state of the login button
   bool _isLoading = true;
+  /// Valid state of the user field
   bool _userValid = false;
+  /// Valid state of the password field
   bool _pwValid = false;
 
+  ///UserName field validations, returns the error message if any validation
+  ///fails, null otherwise
   String _validateUser(String value)
   {
     if(value==null||value.length==0)
@@ -31,6 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     return null;
   }
+  ///Password field validations, returns the error message if any validation
+  ///fails, null otherwise
   String _validatePassword(String value)
   {
     if(value==null||value.length==0)
@@ -39,6 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
     }
     return null;
   }
+
+  /// check for the field as it puts the button in waiting state
   void _login(context){
     setState(()
     {

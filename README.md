@@ -1,16 +1,36 @@
-# needzaio_test
+# UserAPP
 
-Needzaio test  application for flutter and graphql management
+UserApp is a sample application designed under the given requirements of needzaio
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Use the package manager included in [flutter](https://flutter.dev/docs/get-started/install) to install UserApp.
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Run the application in a connected Android or Ios device using :
+```bash
+flutter pub get
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+```bash
+├── assets                  # All the assets used in the project
+│   ├── images              
+│   ├── fonts               
+│   └── icons               # A copy of every icon used in the app
+├── lib                     # Source files 
+│   ├── routes              # Routing management with the autoroute package
+│   ├── screens             # The different views that make up the app
+│   ├── service             # Server connection services used by different parts of the app
+│   ├── values              # Sets of constants
+│   └── widgets             # Custom UI elements
+```
+
+## Clarifications
+ * As no structure was provided A custom project structure was used.
+ * The icons inside the assets folder are just a copy of the icons used, those are inside the NeedZaioIcons font and the 
+need_zaio_icons.dart file
+ * The routing was managed using auto-route-generation

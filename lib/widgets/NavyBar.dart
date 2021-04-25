@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 /// BASED ON: https://github.com/pedromassango/bottom_navy_bar
+/// Color and spacing changes had been applied
+///
 /// A beautiful and animated bottom navigation that paints a rounded shape
 /// around its [items] to provide a wonderful look.
 ///

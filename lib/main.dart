@@ -12,23 +12,25 @@ void main() {
   setupSingletons();
   runApp(MyApp());
 }
-
+/// Configuration of the global services ussed by the app
 void setupSingletons() async {
   locator.registerLazySingleton<GraphQLService>(() => GraphQLService());
 }
 
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  /// Custom router generated bu auto-route
   static final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
 
+    //All the app is inside the GraphQL provider for optimization purposes.
     return GraphQLProvider(
       client: GraphQLService.initiailizeClient(),
       child: MaterialApp.router(
         title: 'UserApp',
+        // Using the custom theme defined in theme.dart
         theme: buildLightTheme(context),
         routerDelegate: _appRouter.delegate(),
         routeInformationParser: _appRouter.defaultRouteParser(),

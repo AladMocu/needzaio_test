@@ -1,5 +1,5 @@
 part of values;
-
+/// Constant sized used for the theming of the app
 class AppColors {
 
   static const Color primaryColor = Color.fromARGB(255, 255, 255, 255); //Color(0xFFFFFFFF)

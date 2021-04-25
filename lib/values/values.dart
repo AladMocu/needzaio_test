@@ -1,3 +1,4 @@
+///Library Containing all constants of the app in its parts.
 library values;
 
 import 'dart:ui';

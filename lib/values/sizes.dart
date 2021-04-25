@@ -1,5 +1,5 @@
 part of values;
-
+/// Constant sized used for the theming of the app
 class Sizes {
   static const double SIZE_120 = 120.0;
   static const double SIZE_60 = 60.0;

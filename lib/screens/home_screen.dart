@@ -15,9 +15,8 @@ class HomeScreen extends StatefulWidget{
 
 class _HomeScreenState extends State<HomeScreen> {
 
+  /// Index used to move items in the navigation bar
   int _currentIndex = 0;
-
-  PageController _pageController;
 
   GraphQLService _qgService =  GetIt.I.get<GraphQLService>();
 

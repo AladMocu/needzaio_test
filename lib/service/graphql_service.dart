@@ -34,7 +34,10 @@ class GraphQLService{
 
   ///GraphQL Client
   ///
-  /// * returns
+  /// [uname]User name
+  /// [password]User Password
+  ///
+  /// Returns null if everything is correct, a error string otherwise
   Future<String> signIn(String uname, String password) async {
     String query="""
                   {
@@ -72,6 +75,8 @@ class GraphQLService{
 
   }
 
+  /// Query used to get the users inside the app. This Query is not handled by
+  /// this class as it can be integrated within the view using the Query widget
   String getUsersQuery()
   {
     String query = """{

@@ -17,9 +17,11 @@ const MaterialColor white = const MaterialColor(
   },
 );
 
+//  Creation of custom text theme for the app.
 TextTheme _buildTextTheme(BuildContext context) {
   var textTheme = Theme.of(context).textTheme;
 
+  // Using the google font "Montserrat" as required in the XD
   return GoogleFonts.montserratTextTheme(textTheme).copyWith(
     headline4: GoogleFonts.josefinSans(
       fontSize: Sizes.TEXT_SIZE_36,
@@ -67,6 +69,7 @@ TextTheme _buildTextTheme(BuildContext context) {
   );
 }
 
+// Creation of the light theme to be used in the app
 ThemeData buildLightTheme(BuildContext context) {
   const Color primaryColor = AppColors.primaryColor;
   const Color secondaryColor = AppColors.secondaryColor;

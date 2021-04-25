@@ -22,11 +22,13 @@ dependencies:
   auto_route: 1.0.2
   # Google public fonts
   google_fonts: ^2.0.0
+  # Text Helping library
   auto_size_text: 2.1.0
   # GPS
   location: ^4.1.1
   # Service Management
   get_it: ^4.0.1
+  # Last Graphql version
   graphql_flutter: 5.0.0-nullsafety.2
 
 

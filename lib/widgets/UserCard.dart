@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:needzaio_test/values/values.dart';
 
+/// User Card containing a profile picture, his name and mail.
 class UserCard extends StatelessWidget{
   UserCard({
     this.name,
@@ -9,10 +10,11 @@ class UserCard extends StatelessWidget{
     this.profileURL="https://via.placeholder.com/150/92c952"
 });
 
+  /// username
 final String name;
-
+  /// user-mail
 final String mail;
-
+  /// Profile picture url
 final String profileURL;
 
 

@@ -5,6 +5,7 @@ import 'package:needzaio_test/routes/router.gr.dart';
 import 'package:needzaio_test/values/values.dart';
 import 'package:location/location.dart';
 
+/// First Screen in the app, containing a button and a image
 class SplashScreen extends StatefulWidget{
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -12,10 +13,13 @@ class SplashScreen extends StatefulWidget{
 
 class _SplashScreenState extends State<SplashScreen> {
 
+  /// Current state of the location permission.
   bool _locationEnabled = false;
 
 
 
+  /// Check if the location permission is granted and if the location service is
+  /// enabled
   void _determinePosition() async {
     Location location = new Location();
 
