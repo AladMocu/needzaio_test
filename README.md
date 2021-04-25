@@ -12,7 +12,7 @@ flutter pub get
 
 Run the application in a connected Android or Ios device using :
 ```bash
-flutter pub get
+flutter run
 ```
 
 ## Project Structure
@@ -30,7 +30,7 @@ flutter pub get
 ```
 
 ## Clarifications
- * As no structure was provided A custom project structure was used.
+ * As no structure was provided a custom project structure was used.
  * The icons inside the assets folder are just a copy of the icons used, those are inside the NeedZaioIcons font and the 
 need_zaio_icons.dart file
  * The routing was managed using auto-route-generation
