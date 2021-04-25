@@ -34,3 +34,4 @@ flutter pub get
  * The icons inside the assets folder are just a copy of the icons used, those are inside the NeedZaioIcons font and the 
 need_zaio_icons.dart file
  * The routing was managed using auto-route-generation
+ * No screen was disabled during the transitions for showcase purposes.
